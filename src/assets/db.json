@@ -1,0 +1,83 @@
+{
+  "heroes": [
+    {
+      "id": "1",
+      "name": "Luca Giacalone",
+      "ability": "Super Code!"
+    },
+    {
+      "id": "2",
+      "name": "Vedova Nera",
+      "ability": "Ipnotismo"
+    },
+    {
+      "id": "3",
+      "name": "Capitan America",
+      "ability": "Forza, velocità, resistenza e riflessi sovrumani"
+    },
+    {
+      "id": "4",
+      "name": "Hulk",
+      "ability": "Forza sovrumana"
+    },
+    {
+      "id": "5",
+      "name": "Ant-Man",
+      "ability": "Rimpicciolimento"
+    },
+    {
+      "id": "6",
+      "name": "Thor",
+      "ability": "Potere del tuono"
+    },
+    {
+      "id": "7",
+      "name": "QuickSilver",
+      "ability": "Super Velocita!"
+    }
+  ],
+
+  "abilities": [
+    {
+      "id": "1",
+      "name": "Super Code!"
+    },
+    {
+      "id": "2",
+      "name": "Rimpicciolimento"
+    },
+    {
+      "id": "3",
+      "name": "Super Forza"
+    },
+    {
+      "id": "4",
+      "name": "Super Velocita"
+    }
+  ],
+
+  "heroes-abilities": [
+    {
+      "heroId": "1",
+      "abilityId": "1"
+    },
+    {
+      "heroId": "5",
+      "abilityId": "2"
+    },
+    {
+      "heroId": "3",
+      "abilityId": "4"
+    },
+    {
+      "heroId": "7",
+      "abilityId": "4"
+    }
+  ],
+  "profiles":[
+    {
+      "id": "1",
+      "nome":"Luca"
+    }
+  ]
+}

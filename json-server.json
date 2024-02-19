@@ -1,0 +1,12 @@
+{
+  "watch": "db.json",
+  "routes": "routes.json",
+  "middlewares": [
+    {
+      "handler": "cors",
+      "options": {
+        "origin": "*"
+      }
+    }
+  ]
+}

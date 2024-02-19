@@ -1,0 +1,24 @@
+<nav>
+    
+  </nav>
+
+  <mat-toolbar [color]="configService.theme === themeEnum.Dark ? 'primary' : ''">
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span class="space">My App</span>
+    <label for="lingua">Lingua Selezionata: {{languageSrv.getLanguage() | async}}</label>
+    <span class="example-spacer"></span>
+    <button mat-button routerLink="admin-page">Admin</button>
+    <button mat-button routerLink="login-page">Login</button>
+    <button mat-button routerLink="hero-page">Heroes</button>
+    <mat-form-field appearance="fill">
+      <mat-select (selectionChange)="changeLanguage($event)">
+        <mat-option [value]=appLanguages.it>Italiano</mat-option>
+        <mat-option [value]=appLanguages.en>Inglese</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <app-profile></app-profile>
+  </mat-toolbar>
+  

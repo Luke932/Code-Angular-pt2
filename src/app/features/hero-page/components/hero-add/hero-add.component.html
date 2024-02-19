@@ -1,0 +1,64 @@
+<p>hero-add works!</p>
+<pre>dirty => {{f.dirty}}</pre>
+<pre>valid => {{f.valid}}</pre>
+<pre>touched => {{f.touched}}</pre>
+<div *ngIf="f.invalid && (f.dirty || f.touched)">
+    <small *ngIf="nameRef?.errors?.['required']">
+        Name is required!
+    </small>
+    <small *ngIf="nameRef?.errors?.['minlength']">
+        Name must be at least 3 chars!
+    </small>
+    <small *ngIf="abilityRef?.errors?.['required']">
+        Ability is required
+    </small>
+</div>
+<form #f="ngForm" (ngSubmit)="add(f)" [ngClass]="{'error' : f.invalid && (f.dirty || f.touched)}">
+    <label for="name">Name:</label>
+    <input name="name"
+     #nameRef="ngModel"
+      placeholder="name"
+       [ngModel]="hero?.name" 
+       required 
+       minlength="3" 
+       [ngClass]="{'error-input' : nameRef.invalid && (nameRef.dirty || nameRef.touched)}">
+    <label for="ability">Ability:</label>
+    <input name="ability"
+     #abilityRef="ngModel"
+     placeholder="ability"
+     [ngModel]="hero?.ability"
+     required 
+     minlength="6"
+     [ngClass]="{'error-input' : abilityRef.invalid && (abilityRef.dirty || abilityRef.touched)}">
+    <button type="submit" [disabled]="f.invalid">Save</button>
+</form>
+
+<form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+    <label for="name">Name:</label>
+    <input type="text" formControlName="name" placeholder="name">
+    <div *ngIf="nameForm.invalid && (nameForm.dirty || nameForm.touched)">
+        <div *ngIf="nameForm?.errors?.['required']">
+            Name is required
+        </div>
+        <div *ngIf="nameForm?.errors?.['minlength']">
+            Name must be at least 3 chars!
+        </div>
+        <div *ngIf="nameForm?.errors?.['forbiddenName']">
+            Name cannot be Prova!
+        </div>
+    </div>
+    <label for="ability">Ability:</label>
+    <input type="text" formControlName="ability" placeholder="ability">
+    <div *ngIf="abilityForm.invalid && (abilityForm.dirty || abilityForm.touched)">
+        <div *ngIf="abilityForm?.errors?.['required']">
+            Ability is required
+        </div>
+    </div>
+    <button type="submit" [disabled]="myForm.invalid">Save</button>
+</form>
+
+<div *ngIf="myForm.invalid && (myForm.dirty || myForm.touched)">
+    <div *ngIf="myForm?.errors?.['formCross']">
+        Exist only one Fabio with SuperCode Ability!
+    </div>
+</div>

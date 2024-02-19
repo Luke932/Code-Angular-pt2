@@ -1,0 +1,17 @@
+{
+    "baseUrl":"http://localhost:4200",
+    "endpoints":{
+        "heroes":{
+            "baseUrl":"/heroes"
+        },
+        "abilities":{
+            "baseUrl":"/abilities"
+        },
+        "heroesAbilities":{
+            "baseUrl":"/heroes-abilities"
+        },
+        "profiles":{
+            "baseUrl":"/profiles"
+        }
+    }
+}

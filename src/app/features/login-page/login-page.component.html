@@ -1,0 +1,12 @@
+<p>login-page works!</p>
+<button (click)="configSrv.setTheme(themeEnum.Light)">Light</button>
+<button (click)="configSrv.setTheme(themeEnum.Dark)">Dark</button>
+
+
+
+<hr>
+
+
+<button (click)="login(appRoles.User)">Login as User</button>
+<button (click)="login(appRoles.Admin)">Login as Admin</button>
+<button (click)="logout()">Logout</button>
